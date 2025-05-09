@@ -58,24 +58,20 @@
 
     <script>
         function validateForm() {
-            // Get form values
             const username = document.getElementById('username').value.trim();
             const name = document.getElementById('name').value.trim();
             const password = document.getElementById('password').value.trim();
             
-            // Get error message elements
             const usernameError = document.getElementById('usernameError');
             const nameError = document.getElementById('nameError');
             const passwordError = document.getElementById('passwordError');
             
-            // Reset previous error messages
             usernameError.textContent = '';
             nameError.textContent = '';
             passwordError.textContent = '';
             
             let isValid = true;
             
-            // Validate each field
             if (username === '') {
                 usernameError.textContent = 'Username is required';
                 isValid = false;
@@ -91,13 +87,11 @@
                 isValid = false;
             }
             
-            // If form is valid, show success page
             if (isValid) {
                 document.getElementById('registrationSection').style.display = 'none';
                 document.getElementById('successPage').style.display = 'block';
             }
             
-            // Prevent form submission (we're handling it with the button click)
             return false;
         }
     </script>
